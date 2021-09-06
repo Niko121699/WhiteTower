@@ -1,0 +1,203 @@
+:root{
+    --main-color: rgb(51, 51, 51);
+    --secundary-color: rgb(251,194,138);
+    --hover-color: rgb(68,68,68);
+    --letter-color: white;
+} 
+*{
+    box-sizing: border-box;
+}
+/*  Styles Navigation */
+.navigation{
+    width: 100%;
+
+}
+.navigation__responsive{
+    width: 100%;
+    display: none;
+    background-color: var(--main-color);
+}
+.navigation__responsive a{
+    display: flex;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.navigation__responsive a:hover{
+    background-color: var(--hover-color);
+    transition: .5s ease-in-out;
+}
+.navigation__responsive a i{
+    color:var(--letter-color);
+}
+.navigation__normal{
+    width: 100%;
+    display: flex;
+    background-color: var(--main-color);
+}
+.navigation__logo{
+    width: 50%;
+    display: flex;
+}
+.navigation__logo p{
+    width: 100%;
+    display: block;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--letter-color);
+}
+.navigation__menu{
+    width: 50%;
+    display: flex;
+}
+.navigation__menu ul{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    right: 3rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navigation__menu ul li{
+    display: flex;
+    width: 17%;
+    list-style-type: none;
+}
+.navigation__menu ul li:hover{
+    background-color: var(--hover-color);
+    transition: .6s ;
+}
+.navigation__menu ul li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--letter-color);
+}
+.navigation__menu ul li a:hover{
+    color: var(--secundary-color);
+}
+/* Media Queries */
+@media screen and (max-width: 768px){
+    .navigation__responsive{
+        display: flex;
+    }
+    .navigation__normal{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navigation__interaction{
+        display: none;
+    }
+    .navigation__logo{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .navigation__logo p{
+        margin: 0;
+        text-align: center;
+    }
+    .navigation__menu{
+        width: 100%;
+    }
+    .navigation__menu ul{
+        flex-direction: column;
+        margin: 0;
+        right: 0;
+    }
+    .navigation__menu ul li{
+        width: 100%;
+        padding: .5rem 0;
+    }
+}
+
+/* Styles navigation image  */
+.navigation__image{
+    width: 100%;
+    height: 90.8vh;
+    background-color: turquoise;
+}
+.navigation__image img{
+    width: 100%;
+    height: 90.8%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.navigation__image_text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(27, 24, 24, 0.5);
+}
+.text_main, .text_secondary{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.text_main{
+    padding: 4rem;
+    font-size: 3rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 900;
+    color: var(--letter-color);
+}
+.text_main span{
+    color: var(--secundary-color);
+}
+.text_secondary{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.2rem;
+    color: var(--letter-color);
+}
+.navigation__image .btn_about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.navigation__image .btn_about a{
+    background-color: var(--main-color);
+    padding: 1rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--letter-color);
+    border-radius: 1rem;
+}
+.navigation__image .btn_about a:hover{
+    background-color: var(--hover-color);
+}
+/* Media queries navigation image */
+@media screen and (max-width: 768px){
+    .navigation__image{
+        height: 50vh;
+    }
+    .navigation__image img{
+        height: 50vh;
+    }
+    .text_main{
+        font-size: 2rem;
+        padding: 3rem;
+    }
+    .text_secondary{
+        font-size: .9rem;
+    }
+    .navigation__image .btn_about{
+        margin-top: 1rem;
+    }
+    .navigation__image .btn_about a{
+        padding: .5rem;
+        font-size: .8rem;
+    }
+}

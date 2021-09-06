@@ -1,0 +1,128 @@
+:root{
+    --main-color: rgb(51, 51, 51);
+    --secundary-color: rgb(251,194,138);
+    --hover-color: rgb(68,68,68);
+    --letter-color: white;
+} 
+*{
+    box-sizing: border-box;
+}
+.main_about{
+    width: 100%;
+}
+.main_about_section1{
+    width: 100%;
+    display: flex;
+}
+.section1_text{
+    width: 50%;
+}
+.section1_img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section1_img img{
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.section1_text_title{
+    width: 100%;
+    text-align: center;
+}
+.section1_text_title p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.section1_text_title p span{
+    color: var(--secundary-color);
+}
+
+.section1_text_content{
+    width: 100%;
+    text-align: center;
+}
+.section1_text_content .title{
+    width: 100%;
+    padding: 1rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.section1_text_content .content{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+/* Media Queries  */
+@media screen and (max-width: 1000px){
+    .section1_text_content .content{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .main_about_section1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section1_text{
+        width: 70%;
+    }
+    .section1_img{
+        display: none;
+    }
+}
+
+/* Style section 2  */
+.main_about_section2{
+    width: 100%;
+    height: 90.8vh;
+}
+.main_about_section2 .img_main{
+    width: 100%;
+    height: 90.8%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.section2_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(27, 24, 24, 0.5);
+}
+.section2_content h2{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--letter-color);
+}
+.comments{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(251,194,138,0.600);
+}
+.comments img{
+    width: 90px;
+    padding: 1rem;
+}
+.comments p{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    color: var(--main-color);
+}
